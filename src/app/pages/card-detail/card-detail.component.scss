@@ -1,0 +1,46 @@
+.detail{
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color-light);
+    padding: 0 5%;
+    box-sizing: border-box;
+    color: var(--color-primary);
+
+    &__container{
+        margin-top: 3rem;
+        h2{
+            font-size: 3rem;
+        }
+    }
+    &__image{
+        margin-top: 3rem;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        padding: 0 3%;
+        margin: 3rem auto;
+        font-size: 1.8rem;
+    }
+}
+.footer{
+     display: flex;
+     justify-content: flex-end;
+     padding: 0 10%;
+}
+.share-btn{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    svg{
+        width: 3rem;
+        margin-right: 1rem;
+        fill: var(--color-primary);
+    }
+}

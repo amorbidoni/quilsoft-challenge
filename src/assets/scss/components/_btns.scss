@@ -1,0 +1,23 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: background-color .5s, box-shadow .5s;
+    &__primary{
+        background-color: var(--color-secondary);
+        width: 100%;
+        height: 45px;
+        box-sizing: border-box;
+        color: var(--color-white);
+        margin: 3rem 0;
+        &:hover{
+            background-color: var(--color-secondary-dark);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+    }
+}

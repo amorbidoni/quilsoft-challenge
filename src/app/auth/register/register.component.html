@@ -1,0 +1,54 @@
+<section class="register">
+    <h2 class="register__title">Sign Up</h2>
+    <form
+      class="form register__form"
+      (ngSubmit)="register()"
+      autocomplete="off"
+      [formGroup]="registerForm">
+        <div class="form__item">
+            <div class="form__item--header">
+                <label class="form__item--label" for="name">Email</label>
+                 <span class="form__item--errormsg" *ngIf="validForm('email')">{{ emailErrorMsg }}*</span>
+            </div>
+            <input class="form__item--input" type="text" id="name" placeholder="name@example.com" formControlName='email'/>
+        </div>
+        <div class="form__item">
+            <div class="form__item--header">
+                <label class="form__item--label" for="name">Password</label>
+                 <span class="form__item--errormsg" *ngIf="validForm('password')">{{ validForm('password')?.errorMsg }}*</span>
+            </div>
+            <input class="form__item--input" type="text" id="name" placeholder="Password" formControlName="password" />
+        </div>
+        <div class="form__item">
+            <div class="form__item--header">
+                <label class="form__item--label" for="name">Confirm password</label>
+                 <span class="form__item--errormsg" *ngIf="validForm('confirmPassword') && !contrasenasNoValidas()">{{ validForm('password')?.errorMsg }}*</span>
+                 <span class="form__item--errormsg" *ngIf="contrasenasNoValidas()">
+                    Passwords do not match*
+                  </span>
+            </div>
+            <input class="form__item--input" type="text" id="name" placeholder="Confirm password" formControlName="confirmPassword" />
+        </div>
+        <button class="btn btn__primary" type="submit">
+            Sign Up
+        </button>
+    </form>
+    <div class="register__options">
+        <a class="register__options--forgot" href="#">Forgot password?</a>
+        <a class="register__options--signup" routerLink="../login">Sign In</a>
+    </div>
+    <div
+        *ngIf="modalConfirm"
+        class="modal-container"
+        [@modalAnimation]>
+       <app-modal
+          modalTitle="User created successfully"
+          [hasCancelBtn]="false"
+          okBtnText="Ok"
+          [hasActionIcon]="true"
+          [okIcon]="true"
+          [hasCancelBtn]="false"
+          (modalValue)="closeModalConfirmation($event)"></app-modal>
+    </div>
+    <div class="overlay-primary" *ngIf="modalConfirm" [@overlayAnimation]></div>
+</section>

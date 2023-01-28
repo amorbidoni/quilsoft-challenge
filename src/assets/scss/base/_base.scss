@@ -1,0 +1,28 @@
+*,
+html{
+    scrollbar-color: var(--color-primary) rgba(0,0,0,0.4);
+    scrollbar-width: thin;
+}
+html{
+    font-size: 62.5%; //1rem = 10px; 10px / 16px = 62.5%
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.body{
+  overflow: hidden;
+}
+input:focus, input:active{
+  outline: none;
+}
+a,
+a:focus,
+a:active{
+  text-decoration: none;
+  color: inherit;
+}

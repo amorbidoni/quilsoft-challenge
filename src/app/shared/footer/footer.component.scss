@@ -1,0 +1,33 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20%;
+    background-color: var(--color-white);
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.3rem;
+        svg{
+            width: 2rem;
+            margin-bottom: .5rem;
+        }
+        &--search{
+            color: var(--color-secondary);
+            svg{
+                fill: var(--color-secondary);
+            }
+        }
+        &--saved{
+            color: var(--color-primary);
+            svg{
+                fill: var(--color-primary);
+            }
+        }
+    }
+
+}

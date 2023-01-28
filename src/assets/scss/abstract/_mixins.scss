@@ -1,0 +1,49 @@
+@mixin respond($breackpoint) {
+
+    @if $breackpoint == phone-small {
+     @media (min-width: 22.5em) /*600px*/ {
+       @content;
+     }
+   }
+
+    @if $breackpoint == phone {
+     @media (min-width: 37.5em) /*600px*/ {
+       @content;
+     }
+   }
+   @if $breackpoint == tab-port {
+     @media  (min-width: 56.25em) /*760px*/ {
+       @content;
+     }
+   }
+   @if $breackpoint == break-1020 {
+       @media (min-width: 63.75em) /*1020px*/ {
+         @content;
+       }
+     }
+     @if $breackpoint == break-1080 {
+       @media (min-width: 67.5em) /*1080px*/ {
+         @content;
+       }
+     }
+   @if $breackpoint == break-1180 {
+       @media (min-width: 73.75em) /*1180px*/ {
+         @content;
+       }
+     }
+   @if $breackpoint == tab-land {
+     @media (min-width: 75em) /*1200px*/ {
+       @content;
+     }
+   }
+   @if $breackpoint == break-1226 {
+       @media (min-width: 76.62em) /*1226px*/ {
+         @content;
+       }
+     }
+   @if $breackpoint == big-desktop {
+     @media (min-width: 112.5em) /*1800px*/ {
+       @content;
+     }
+   }
+}

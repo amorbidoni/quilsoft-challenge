@@ -1,0 +1,10 @@
+.layout{
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    height: 100vh;
+    background-color: var(--bg-color-light);
+    &__content{
+        overflow-y: scroll;
+        padding: 3rem 7%;
+    }
+}
