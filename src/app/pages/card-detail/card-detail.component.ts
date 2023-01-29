@@ -11,14 +11,14 @@ import { Places } from '../../interfaces/Places.interface';
 export class CardDetailComponent implements OnInit {
   public placeId!:string;
   public place!: Places | undefined;
+  public backRoute!: string; 
   constructor(private route : ActivatedRoute,
               private placesService: PalcesService) { }  
 
   ngOnInit(): void {
+    this.backRoute = this.route.snapshot.paramMap.get('backRoute') || '/dashboard';
     this.placeId = this.route.snapshot.params['id'];
-    setTimeout(() => {
-      this.getPlaceById(this.placeId);
-    }, 1500);
+    this.getPlaceById(this.placeId);
   }
 
   getPlaceById(id:string){

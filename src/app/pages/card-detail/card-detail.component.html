@@ -1,8 +1,8 @@
 <section class="detail">
-    <app-header-back></app-header-back>
+    <app-header-back [route]="backRoute"></app-header-back>
    <ng-container *ngIf="place; else elseTemplate">
         <div class="detail__container" >
-            <h2>{{ place.title }}</h2>
+            <h2>{{ place.title }}, {{place.location}}</h2>
             <div class="detail__image" >
                 <img [src]="place.imageUrl" [alt]="place.imageAlt">
             </div>

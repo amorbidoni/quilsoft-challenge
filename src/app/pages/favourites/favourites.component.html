@@ -1,0 +1,5 @@
+<section class="favourites">
+    <div class="favourites__item" *ngFor="let place of favourites">
+        <app-card [showDescription]="false" [showLocation]="true" [place]="place" backRoute="/dashboard/favourites"></app-card>
+    </div>
+</section>

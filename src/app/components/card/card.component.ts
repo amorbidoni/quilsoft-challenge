@@ -9,12 +9,13 @@ import { Place } from '../../models/place-model';
 })
 export class CardComponent implements OnInit {
   @Input() place!: Place;
+  @Input() showDescription: boolean = true;
+  @Input() showLocation: boolean = false;
+  @Input() showTitle: boolean = true;
+  @Input() backRoute: string = '/dashboard';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleFav(){
-    this.place.isInFav = !this.place.isInFav;
-  }
 }

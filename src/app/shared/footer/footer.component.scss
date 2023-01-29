@@ -5,6 +5,7 @@
     height: 100%;
     padding: 0 20%;
     background-color: var(--color-white);
+    a{cursor: pointer;}
     &__item{
         display: flex;
         flex-direction: column;

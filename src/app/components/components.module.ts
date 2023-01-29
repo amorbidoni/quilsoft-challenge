@@ -9,6 +9,7 @@ import { HeaderBackComponent } from './header-back/header-back.component';
 import { LoaderComponent } from './loader/loader.component';
 import { FavBtnComponent } from './fav-btn/fav-btn.component';
 import { ModalComponent } from './modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +25,7 @@ import { ModalComponent } from './modal/modal.component';
     ModalComponent
   ],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule, FormsModule
   ],
   exports:[
     NavBarComponent, 

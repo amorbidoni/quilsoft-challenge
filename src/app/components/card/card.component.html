@@ -1,11 +1,13 @@
 <div class="card-container">
-    <a class="card" [routerLink]="['/card-detail', place.id]">
+    <a class="card" [routerLink]="['/card-detail', place.id, {backRoute}]">
         <div class="card__image">
             <img [src]="place.imageUrl" [alt]="place.imageAlt">
         </div>
         <div class="card__description">
-            <p>{{ place.description }}</p>
+            <h4 *ngIf="showTitle">{{place.title}}</h4>
+            <p *ngIf="showLocation">{{place.location}}</p>
+            <p *ngIf="showDescription">{{ place.description }}</p>
         </div>
     </a>
-    <app-fav-btn [isInFav]="place.isInFav"></app-fav-btn>
+    <app-fav-btn [isInFav]="place.isInFav" [palceId]="place.id"></app-fav-btn>
 </div>

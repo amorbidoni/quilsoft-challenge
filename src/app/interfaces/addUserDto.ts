@@ -1,5 +1,5 @@
 
-export interface UserInterface{
+export interface AddUserInterface{
     email:string,
     password:string,
     confirmPassword?:string

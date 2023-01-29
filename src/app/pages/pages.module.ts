@@ -7,13 +7,15 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../components/components.module';
 import { CardDetailComponent } from './card-detail/card-detail.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 
 @NgModule({
   declarations: [
     PagesComponent,
     HomeComponent,
-    CardDetailComponent
+    CardDetailComponent,
+    FavouritesComponent,
   ],
   imports: [
     CommonModule,

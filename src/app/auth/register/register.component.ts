@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { FormValidatorService } from 'src/app/services/form-validator.service';
-import { UserInterface } from '../../interfaces/UserInterface';
+import { AddUserInterface } from '../../interfaces/addUserDto';
 import { UsersService } from '../../services/users.service';
 import { ModalAnimation } from '../../shared/animations/modal.animation';
 import { OverlayAnimation } from '../../shared/animations/overlay.animation';
@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
     this.formSumitted = true;
     if (this.registerForm.invalid) return;
 
-    const newUser: UserInterface = {
+    const newUser: AddUserInterface = {
       email : this.registerForm.get('email')?.value,
       password:this.registerForm.get('password')?.value,
       confirmPassword:this.registerForm.get('confirmPassword')?.value,

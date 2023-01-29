@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { PalcesService } from '../../services/palces.service';
 
 @Component({
   selector: 'app-fav-btn',
@@ -9,11 +10,11 @@ export class FavBtnComponent implements OnInit {
   @Input() isInFav:boolean = false;
   @Input() palceId!:string;
   
-  constructor() { }
+  constructor(private placesService : PalcesService) { }
 
   ngOnInit(): void {
   }
   toggleFav(){
-    this.isInFav = !this.isInFav
+    this.placesService.toggleToFavourites(this.palceId);
   }
 }
