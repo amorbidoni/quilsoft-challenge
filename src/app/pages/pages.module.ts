@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     PagesRoutingModule,
     SharedModule,
     ComponentsModule,
-     FormsModule
+    FormsModule
   ]
 })
 export class PagesModule { }

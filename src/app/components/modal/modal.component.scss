@@ -1,3 +1,4 @@
+ @import '../../../assets/scss/abstract/mixins';   
 .viewport{
     width: 100vw;
     height: 100vh;
@@ -18,18 +19,24 @@
     background-color: var(--color-white);
     position: relative;
     color: var(--color-primary);
+    @include respond(phone){
+        width: 500px;
+    }
     &__title{
         font-size: 4rem;
         text-align: center;
         margin-top: 5rem;
     }
-    svg{
-        width: 8rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        fill: var(--color-secondary);
+    .ok-icon{
+
+        svg{
+            width: 8rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            fill: var(--color-secondary);
+        }
     }
 }
 .btns-container{
@@ -38,4 +45,16 @@
     justify-content: flex-end;
     gap: 2rem;
     margin-top: auto;
+}
+.share-icons{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 5rem;
+    &__btn{
+        cursor: pointer;
+        svg{
+            width: 3rem;
+        }
+    }
 }
