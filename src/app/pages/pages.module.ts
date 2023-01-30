@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../components/components.module';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { FavouritesComponent } from './favourites/favourites.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FavouritesComponent } from './favourites/favourites.component';
     CommonModule,
     PagesRoutingModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+     FormsModule
   ]
 })
 export class PagesModule { }

@@ -94,6 +94,7 @@ export class PalcesService {
       return of(favourites)
     }
   }
+  // 
   getPlacesApi(){
     return this.http.get("https://api.pexels.com/v1/search?query=naturaleza", {headers:{
       "Authorization":"mVXrvXik82KqcFCeu6Ui5loA5EjFhYDsnrBOZm50A3Z8mrQqw1iK91rL"
