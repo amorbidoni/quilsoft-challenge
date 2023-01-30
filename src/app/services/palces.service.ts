@@ -95,17 +95,17 @@ export class PalcesService {
     }
   }
   // 
-  getPlacesApi(){
-    return this.http.get("https://api.pexels.com/v1/search?query=naturaleza", {headers:{
-      "Authorization":"mVXrvXik82KqcFCeu6Ui5loA5EjFhYDsnrBOZm50A3Z8mrQqw1iK91rL"
-    }})
-    .pipe(
-      map((res:any)=>
-        {
-          const photos =res['photos'];
-          return photos.map((item:any)=>({...item, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, accusantium! Alias quisquam facilis magni magnam tempore veritatis architecto, dicta aperiam saepe corporis libero similique soluta. Iste rem molestias iusto labore.'}))
-        }
-      )
-    )
-  }
+  // getPlacesApi(){
+  //   return this.http.get("https://api.pexels.com/v1/search?query=naturaleza", {headers:{
+  //     "Authorization":"mVXrvXik82KqcFCeu6Ui5loA5EjFhYDsnrBOZm50A3Z8mrQqw1iK91rL"
+  //   }})
+  //   .pipe(
+  //     map((res:any)=>
+  //       {
+  //         const photos =res['photos'];
+  //         return photos.map((item:any)=>({...item, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, accusantium! Alias quisquam facilis magni magnam tempore veritatis architecto, dicta aperiam saepe corporis libero similique soluta. Iste rem molestias iusto labore.'}))
+  //       }
+  //     )
+  //   )
+  // }
 }
