@@ -3,6 +3,8 @@
     margin-bottom: 3rem;
     &__item{
         position: relative;
+        max-width: 500px;
+        margin: 0 auto;
         &--input{
             padding-left: 5rem;
             padding-right: 1rem;
@@ -21,6 +23,8 @@
         }
     }
 }
+
+
 [type="search"]::-webkit-search-cancel-button{
     -webkit-appearance: none;
     appearance: none;

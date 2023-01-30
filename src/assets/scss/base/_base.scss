@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '../abstract/mixins';
 *,
 html{
     scrollbar-color: var(--color-primary) rgba(0,0,0,0.4);
@@ -6,6 +7,9 @@ html{
 }
 html{
     font-size: 62.5%; //1rem = 10px; 10px / 16px = 62.5%
+    @include respond(tab-port){
+      font-size: 70%;
+    }
 }
 *,
 *::after,

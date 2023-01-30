@@ -9,13 +9,16 @@ import { Places } from '../../interfaces/Places.interface';
 })
 export class HomeComponent implements OnInit {
   public places!: Places[];
-  
+  public content!: Places[];
   constructor(private placesService : PalcesService) { }
 
   ngOnInit(): void {
     setTimeout(() => {
       this.getPlaces();
     }, 2000);
+    this.placesService.getPlacesApi().subscribe(res=>{
+      console.log(res)
+    })
   }
 
   getPlaces(){
@@ -23,5 +26,6 @@ export class HomeComponent implements OnInit {
       this.places = res;
     })
   }
+
 
 }

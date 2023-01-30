@@ -1,5 +1,11 @@
 <section class="favourites">
-    <div class="favourites__item" *ngFor="let place of favourites">
-        <app-card [showDescription]="false" [showLocation]="true" [place]="place" backRoute="/dashboard/favourites"></app-card>
-    </div>
+    <ng-container *ngIf="favourites.length > 0; else elseTemplate">
+        <div class="favourites__item" *ngFor="let place of favourites">
+            <app-card [showDescription]="false" [showLocation]="true" [place]="place" backRoute="/dashboard/favourites"></app-card>
+        </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <h4>Add places to favorites!!</h4>        
+    </ng-template>
+    
 </section>

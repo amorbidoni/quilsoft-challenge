@@ -7,7 +7,7 @@
    }
 
     @if $breackpoint == phone {
-     @media (min-width: 37.5em) /*600px*/ {
+     @media (min-width: 35em) /*560px*/ {
        @content;
      }
    }

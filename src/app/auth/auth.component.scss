@@ -1,3 +1,4 @@
+@import '../../assets/scss/abstract/mixins';
 .auth{
     display: flex;
     flex-direction: column;
@@ -6,6 +7,12 @@
     background-color: var(--bg-color-light);
     width: 100vw;
     height: 100vh;
+    @include respond(phone){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }  
     &__logo{
         width: 150px;
         height: 150px;
@@ -14,7 +21,9 @@
         margin: 4rem;
         display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;  
+    
+      
         span{
             color: var(--color-secondary);
             text-align: center;

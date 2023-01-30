@@ -1,3 +1,4 @@
+@import '../../../assets/scss/abstract/mixins';
 .path {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -10,3 +11,15 @@
       stroke-dashoffset: 0;
     }
   }
+.loader{
+  svg{
+    width: 100vw;
+    @include respond(phone){
+      width: 90vw;
+      margin: -20% auto 0;
+    }
+    @include respond(tab-port){
+      margin: -30% auto 0;
+    }
+  }
+}

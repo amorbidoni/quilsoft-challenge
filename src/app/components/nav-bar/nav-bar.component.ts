@@ -14,5 +14,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
     this.activeUser = this.usersService.getUserInfo;
   }
-
+  closeNavBar(){
+    this.navBar = false;
+  }
 }

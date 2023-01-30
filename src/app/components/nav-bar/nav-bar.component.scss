@@ -1,3 +1,4 @@
+@import '../../../assets/scss/abstract/mixins';
 .nav{
     &__nav{
         z-index: -1;
@@ -124,8 +125,17 @@
 }
 
 .nav-bar{
-    width: 100%;
+    width: 100vw;
     margin-top: 5rem;
+    @include respond(phone){
+        text-align: center;
+    }
+    @include respond(tab-port){
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+    }
     svg{
         width: 2rem;
         margin-right: 1rem;
@@ -134,13 +144,25 @@
         list-style: none;
         padding: 0 2rem;
         box-sizing: border-box;
+        @include respond(tab-port){
+            display: flex;
+        }
+
     }
     &__item{
         a{
             border-bottom: 1px solid var(--color-primary);
+            @include respond(tab-port){
+              border: none;
+            
+            }
         }
         &:first-child{
             border-top: 1px solid var(--color-primary);
+            @include respond(tab-port){
+                border: none;  
+
+            }
         }
        
 
@@ -151,9 +173,29 @@
         align-items: center;
         width: 100%;    
         font-size: 2rem;
+        @include respond(tab-port){
+            padding: 0 1rem;
+        }
     }
     .settings-btn{
         padding: 0 2rem;
         margin-top: 10rem;
+        @include respond(tab-port){
+           display: none;
+        }
     }
+}
+.nav_mobile{
+    @include respond(tab-port){
+        display: none;
+    }
+}
+.nav_desktop{
+    display: none;
+    
+    @include respond(tab-port){
+        display: block;
+    }
+
+
 }

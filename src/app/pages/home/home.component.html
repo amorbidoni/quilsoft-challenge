@@ -1,11 +1,15 @@
-<section>
+<section class="home">
     <app-search-bar></app-search-bar>
-    <ng-container *ngIf="places; else elseTemplate">
-        <div *ngFor="let place of places">
-            <app-card [place]="place"></app-card>
-        </div>
-    </ng-container>
-    <ng-template #elseTemplate>
-        <app-loader></app-loader>
-    </ng-template>
+    <div class="home__card-container">
+        <ng-container *ngIf="places; else elseTemplate">
+            <div class="home__card" *ngFor="let place of places">
+                <app-card [place]="place"></app-card>
+            </div>
+        </ng-container>
+    </div>
+    <div class="loader-container">
+        <ng-template #elseTemplate>
+            <app-loader></app-loader>
+        </ng-template>
+    </div>
 </section>
